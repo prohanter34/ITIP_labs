@@ -6,7 +6,19 @@ public class HashTable<T, U> {
     private int length;
     private int size;
 
+    public static void main(String[] args) {
+        HashTable<Integer, String> map = new HashTable<>();
+        map.put(1, "string");
+        map.put(1, "smth");
+        map.put(1, "раполдвадпаа");
+        map.put(6, "jfirjrj");
+        System.out.println(map.get(1));
+        System.out.println(map.get(1));
+        System.out.println(map.get(1));
+        System.out.println(map.get(6));
+        System.out.println(map.size());
 
+    }
     public HashTable() {
         length = 11;
         data = new Pair[length];

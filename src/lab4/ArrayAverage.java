@@ -32,5 +32,4 @@ public class ArrayAverage {
         }
         return 0;
     }
-
 }

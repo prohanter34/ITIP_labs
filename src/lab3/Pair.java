@@ -21,7 +21,7 @@ public class Pair<T, U> {
     }
 
     public U put(T key, U value) {
-        if (key != this.key) {
+        if (!key.equals(this.key)) {
             if (child == null) {
                 child = new Pair<T, U>(key, value, this);
                 return null;
@@ -36,7 +36,7 @@ public class Pair<T, U> {
     }
     
     public U get(T key) {
-        if (this.key == key) {
+        if (this.key.equals(key)) {
             return value;
         } else if (child == null) {
             return null;
@@ -46,7 +46,7 @@ public class Pair<T, U> {
     }
 
     public U remove(T key, HashTable<T, U> map) {
-        if (this.key == key) {
+        if (this.key.equals(key)) {
             if (parent != null) {
                 parent.deleteChild();
                 parent.setChild(child);
