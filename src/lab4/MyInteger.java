@@ -6,7 +6,7 @@ public class MyInteger {
         try {
             return Integer.parseInt(str);
         } catch (NumberFormatException e) {
-            throw new CustomNumberFormatException(e.getMessage());
+            throw new CustomNumberFormatException("fefefefrger");
         }
     }
 

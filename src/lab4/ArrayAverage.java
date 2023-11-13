@@ -9,7 +9,7 @@ import java.util.function.Function;
 public class ArrayAverage {
 
     public static void main(String[] args) {
-        Character[] array = {'2', '3', '8', '9'};
+        String[] array = {"2", "3", "8", "a"};
         System.out.println(arrayAverage(array));
 
     }

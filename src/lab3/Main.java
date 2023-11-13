@@ -11,6 +11,7 @@ public class Main {
         System.out.println(chair.getDescription());
         store.remove(2);
         System.out.println(store.get(2));
+        System.out.println(store.size());
 
     }
 
