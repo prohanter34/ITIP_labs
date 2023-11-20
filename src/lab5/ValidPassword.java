@@ -12,7 +12,7 @@ public class ValidPassword {
         System.out.println(validPassword(password));
     }
     public static boolean validPassword(String password) {
-        Pattern pattern = Pattern.compile("(?=.*\\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%]).{8,16}");
+        Pattern pattern = Pattern.compile("(?=.*\\d)(?=.*[a-z])(?=.*[A-Z])(?!.*[@#$%]).{8,16}");
         Matcher matcher = pattern.matcher(password);
         return matcher.find();
     }
