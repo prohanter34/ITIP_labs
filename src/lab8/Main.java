@@ -1,6 +1,6 @@
 package lab8;
 
-import lab8.DataProcessors.CountProcessor;
+import lab8.DataProcessors.*;
 import lab8.DataProcessors.SortProcessor;
 
 import java.util.Scanner;
@@ -29,7 +29,7 @@ public class Main {
                 switch (sortCommand) {
                     case "currency":
                     {
-                        SortProcessor processor = new SortProcessor();
+                        SortByCurrency processor = new SortByCurrency();
                         manager.registerDataProcessor(processor);
                         manager.loadData(paths[0]);
                         manager.processData();
@@ -37,7 +37,7 @@ public class Main {
                     }
                     case "country":
                     {
-                        SortProcessor processor = new SortProcessor();
+                        SortByCountry processor = new SortByCountry();
                         manager.registerDataProcessor(processor);
                         manager.loadData(paths[0]);
                         manager.processData();
@@ -59,7 +59,7 @@ public class Main {
                 switch (countCommand) {
                     case "avg currency":
                     {
-                        CountProcessor processor = new CountProcessor();
+                        CountCurrencyAVG processor = new CountCurrencyAVG();
                         manager.registerDataProcessor(processor);
                         manager.loadData(paths[0]);
                         manager.processData();
@@ -67,7 +67,7 @@ public class Main {
                     }
                     case "people of countries":
                     {
-                        CountProcessor processor = new CountProcessor();
+                        CountByCountry processor = new CountByCountry();
                         manager.registerDataProcessor(processor);
                         manager.loadData(paths[0]);
                         manager.processData();

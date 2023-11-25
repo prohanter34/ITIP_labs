@@ -1,8 +1,7 @@
 package lab8;
 
-import lab8.DataProcessors.CountProcessor;
+import lab8.DataProcessors.*;
 import lab8.DataProcessors.DataProcessor;
-import lab8.DataProcessors.SortProcessor;
 
 import java.io.*;
 import java.lang.reflect.InvocationTargetException;
@@ -29,10 +28,10 @@ public class DataManager {
 
     public static void main(String[] args) {
         DataManager manager = new DataManager();
-        CountProcessor processor = new CountProcessor();
-//        SortProcessor processor1 = new SortProcessor();
+        CountByCountry processor = new CountByCountry();
+        SortByCurrency processor1 = new SortByCurrency();
         manager.registerDataProcessor(processor);
-//        manager.registerDataProcessor(processor1);
+        manager.registerDataProcessor(processor1);
         manager.loadData("src/lab8/data.csv");
         manager.processData();
         manager.saveData("src/lab8/newdata.csv");
